@@ -83,6 +83,11 @@ header  {
 }
 
 @media (max-width: 700px) {
+  header {
+    transform: scale(1);
+    aspect-ratio: auto;
+  }
+
   .top-row {
     flex-direction: column-reverse;
     text-align: center;
@@ -94,5 +99,10 @@ header  {
 
   .buttons-row {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cta-button {
+    flex-shrink: 0;
   }
 }
