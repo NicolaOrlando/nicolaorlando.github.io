@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-image: url("./images/background.png");
   background-size: cover;
   background-position: center;
@@ -21,7 +22,24 @@ body {
   background-attachment: fixed;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  right: 3vw;
+  bottom: 4vh;
+  width: min(22vmin, 280px);
+  aspect-ratio: 1 / 1;
+  background-image: url("./images/columngif.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
 header  {
+    --drag-x: 0px;
+    --drag-y: 0px;
     background-image: url("./images/notepad.png");
     background-size: contain;
     background-position: center;
@@ -31,11 +49,19 @@ header  {
     aspect-ratio: 4 / 2;
     padding: clamp(30px, 8vmin, 60px);
     margin: 0px;
-    transform: scale(1.4);
+    transform: translate(var(--drag-x), var(--drag-y)) scale(1.4);
     box-sizing:border-box;
     text-align: left;
     font-family: "W95FA", sans-serif;
     font-size: clamp(6px, 1.5vmin, 9px);
+    position: relative;
+    z-index: 1;
+    cursor: grab;
+}
+
+header.dragging {
+  cursor: grabbing;
+  user-select: none;
 }
 
 
@@ -84,7 +110,7 @@ header  {
 
 @media (max-width: 700px) {
   header {
-    transform: scale(1);
+    transform: translate(var(--drag-x), var(--drag-y)) scale(1);
     aspect-ratio: auto;
   }
 
