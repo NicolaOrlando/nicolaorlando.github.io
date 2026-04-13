@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "W95FA";
+  src: url("./assets/font/w95fa/w95fa.woff2") format("woff2"),
+       url("./assets/font/w95fa/w95fa.woff") format("woff"),
+       url("./assets/font/w95fa/W95FA.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header  {
+    background-color: #c0c0c0;
+    background-image: url("./images/notepad.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    width: min(95vmin, 700px);
+    aspect-ratio: 4 / 2;
+    padding: 70px;
+    margin: 0px;
+    transform: translate(-4px, -60px);
+    box-sizing:border-box;
+    text-align: left;
+    font-family: "W95FA", sans-serif;
+    font-size: 9px;
+}
+
+
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-image {
+  display: block;
+  flex-shrink: 0;
+}
+
+.buttons-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.cta-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta-button span {
+  margin: 0;
+  color: purple;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .top-row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .buttons-row {
+    flex-wrap: wrap;
+  }
+}
