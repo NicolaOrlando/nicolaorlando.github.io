@@ -22,21 +22,21 @@ body {
 }
 
 header  {
-    background-color: #c0c0c0;
     background-image: url("./images/notepad.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     color: rgb(0, 0, 0);
-    width: min(95vmin, 700px);
+    width: min(95vmin, 600px);
     aspect-ratio: 4 / 2;
-    padding: 70px;
+    padding: 60px;
     margin: 0px;
-    transform: translate(-4px, -60px);
+    transform: scale(1.4);
     box-sizing:border-box;
     text-align: left;
     font-family: "W95FA", sans-serif;
     font-size: 9px;
+    
 }
 
 
