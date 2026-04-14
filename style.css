@@ -47,7 +47,7 @@ header  {
     color: rgb(0, 0, 0);
     width: min(95vmin, 600px);
     aspect-ratio: 4 / 2;
-    padding: clamp(30px, 8vmin, 60px);
+    padding: clamp(75px, 8vmin, 60px);
     margin: 0px;
     transform: translate(var(--drag-x), var(--drag-y)) scale(1.4);
     box-sizing:border-box;
